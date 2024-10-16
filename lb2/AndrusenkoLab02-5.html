@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Галерея фотографій з підписами">
+    <meta name="keywords" content="фотографії, галерея, підписи, атрибути">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея фотографій</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #4a76a8;
+            margin-bottom: 30px;
+        }
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .gallery-item {
+            margin: 15px;
+            text-align: center;
+        }
+        .gallery-item img {
+            border: 2px solid #4a76a8;
+            border-radius: 10px;
+        }
+        .caption {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Галерея фотографій</h1>
+
+    <div class="gallery">
+        <!-- Перша фотографія -->
+        <div class="gallery-item">
+            <img src="https://mariart.kiev.ua/image/catalog/182759772978/e2607dbf0e01daa6.jpg" alt="Гірський краєвид" width="600" height="400" border="2">
+            <div class="caption">Гірський краєвид</div>
+        </div>
+
+        <!-- Друга фотографія -->
+        <div class="gallery-item">
+            <img src="https://img.freepik.com/free-photo/beautiful-tropical-beach-sea-ocean-with-white-cloud-blue-sky-and-copyspace_74190-8663.jpg" alt="Пляж і море" width="600" height="400" border="2">
+            <div class="caption">Пляж і море</div>
+        </div>
+
+        <!-- Третя фотографія -->
+        <div class="gallery-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/%D0%97%D0%B0%D1%85%D1%96%D0%B4_%D1%81%D0%BE%D0%BD%D1%86%D1%8F_%D0%B2_%D1%81%D0%B5%D0%BB%D1%96_%D0%A2%D0%B8%D0%BB%D1%8F%D0%B2%D0%BA%D0%B0.jpg/1280px-%D0%97%D0%B0%D1%85%D1%96%D0%B4_%D1%81%D0%BE%D0%BD%D1%86%D1%8F_%D0%B2_%D1%81%D0%B5%D0%BB%D1%96_%D0%A2%D0%B8%D0%BB%D1%8F%D0%B2%D0%BA%D0%B0.jpg" alt="Захід сонця" width="600" height="400" border="2">
+            <div class="caption">Захід сонця</div>
+        </div>
+    </div>
+
+</body>
+</html>
