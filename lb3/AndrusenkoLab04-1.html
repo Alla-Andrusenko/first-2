@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Інформація про мене та мої хобі, включаючи програмування">
@@ -9,36 +10,43 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #eef3f7;
+            background-size: cover;
             color: #1a2f5b;
             margin: 0;
             padding: 20px;
             line-height: 1.8;
         }
-        h1, h2 {
+
+        h1,
+        h2 {
             text-align: center;
             color: #4a76a8;
         }
+
         h1 {
             border-bottom: 2px solid #4a76a8;
             padding-bottom: 10px;
         }
+
         p {
             text-align: justify;
             margin: 15px 0;
         }
+
         pre {
             background-color: #f4f7fb;
             padding: 10px;
             border-radius: 8px;
             border: 1px solid #c9d3e1;
         }
+
         .signature {
             margin-top: 50px;
             text-align: right;
             font-style: italic;
             color: #4a76a8;
         }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -47,18 +55,48 @@
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
         }
+
+        .scrolling-text {
+            background-color: #4a76a8;
+            color: #1a2f5b;
+            height: 50px;
+            width: 100%;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .scrolling-text span {
+            position: absolute;
+            white-space: nowrap;
+            animation: scrollText 10s linear infinite;
+        }
+
+        @keyframes scrollText {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <div class="container">
         <h1>Про себе</h1>
         <p>
-            Мене звати <strong>Андрусенко Алла</strong>. Я <em>студентка</em> групи <u>305-ТН</u>. Навчаюсь на факультеті комп'ютерних наук. 
+            Мене звати <strong>Андрусенко Алла</strong>. Я <em>студентка</em> групи <u>305-ТН</u>. Навчаюсь на факультеті комп'ютерних наук.
             Цікавлюсь сучасними технологіями, особливо <strong>програмуванням</strong> та <em>веб-розробкою</em>.
         </p>
         <p>
-            У вільний час люблю читати книги, грати в настільні ігри та писати невеликі програми на <u>JavaScript</u> та <em>Python</em>. 
+            У вільний час люблю читати книги, грати в настільні ігри та писати невеликі програми на <u>JavaScript</u> та <em>Python</em>.
             Моя мета — стати професіоналом у сфері програмування та веб-дизайну.
         </p>
 
@@ -68,21 +106,26 @@
             Ось приклад простої програми на мові HTML, яка створює заголовок та абзац:
         </p>
         <pre>
-    <!DOCTYPE html>
-    <html lang="uk">
-    <head>
-    <meta charset="UTF-8">
-    <title>Приклад програми</title>
-    </head>
-<body>
-   <h1>Привіт, світ!</h1>
-    <p>Це мій перший HTML-документ.</p>
-</body>
-</html>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="uk"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;title&gt;Приклад програми&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;h1&gt;Привіт, світ!&lt;/h1&gt;
+   &lt;p&gt;Це мій перший HTML-документ.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
         </pre>
 
         <p class="signature">Студентка групи 305-ТН Андрусенко А.А.</p>
     </div>
 
+    <div class="scrolling-text">
+        <span>Ласкаво просимо на мою веб-сторінку! Тут ви знайдете інформацію про мої хобі та навички програмування.</span>
+    </div>
+
 </body>
+
 </html>

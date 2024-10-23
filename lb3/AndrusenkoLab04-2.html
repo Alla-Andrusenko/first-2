@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рядки з біжучим текстом</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .marquee-container {
+            margin-bottom: 20px;
+        }
+
+        marquee {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            padding: 15px;
+        }
+
+        .marquee-1 {
+            background-color: #4a76a8;
+        }
+
+        .marquee-2 {
+            background-color: #99ff00;
+        }
+
+        .marquee-3 {
+            background-color: #ff9900;
+        }
+
+        .marquee-4 {
+            background-color: #8b008b;
+        }
+
+        .marquee-5 {
+            background-color: #1a2f5b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="marquee-container">
+        <marquee class="marquee-1" behavior="alternate" direction="left" width="100%">
+            Текст коливається з боку в бік.
+        </marquee>
+    </div>
+
+    <div class="marquee-container">
+        <marquee class="marquee-2" direction="left" width="100%">
+            Текст пробігає справа наліво та з’являється знову.
+        </marquee>
+    </div>
+
+    <div class="marquee-container">
+        <marquee class="marquee-3" direction="right" scrollamount="10" width="100%" behavior="scroll" loop="1">
+            Текст пробігає зліва направо та зупиняється.
+        </marquee>
+    </div>
+
+    <div class="marquee-container">
+        <marquee class="marquee-4" direction="left" scrollamount="5" width="100%">
+            Текст рухається з запізненням (повільно).
+        </marquee>
+    </div>
+
+    <div class="marquee-container">
+        <marquee class="marquee-5" direction="left" scrollamount="15" width="100%">
+            Текст рухається швидше.
+        </marquee>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IvanennkoLab04-3</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .marquee-container {
+            margin-bottom: 20px;
+            height: 200px; 
+            overflow: hidden;
+            position: relative;
+        }
+
+        marquee {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            padding: 15px;
+        }
+
+        .marquee-1 {
+            background-color: #4a76a8;
+        }
+
+        .marquee-2 {
+            background-color: #99ff00;
+        }
+
+        .marquee-3 {
+            background-color: #ff9900;
+        }
+
+        .marquee-4 {
+            background-color: #8b008b;
+        }
+
+        .marquee-5 {
+            background-color: #1a2f5b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="marquee-container">
+        <marquee class="marquee-1" behavior="alternate" direction="up" height="100%">
+            <img src="C:\Users\Asus\Pictures\Saved Pictures\1993698.jpg" alt="Image1">
+            Текст і рисунки коливаються.
+            <img src="C:\Users\Asus\Pictures\Saved Pictures\7244709.jpg" alt="Image2">
+        </marquee>
+    </div>
+
+    <div class="marquee-container">
+        <marquee class="marquee-2" direction="up" height="100%">
+            <img src="C:\Users\Asus\Pictures\Saved Pictures\1993698.jpg" alt="Image1">
+            <img src="C:\Users\Asus\Pictures\Saved Pictures\7244709.jpg" alt="Image2">
+            <img src="C:\Users\Asus\Pictures\Saved Pictures\7869681.jpg" alt="Image3">
+        </marquee>
+    </div>
+
+    <div class="marquee-container">
+        <marquee class="marquee-3" direction="down" height="100%" scrollamount="10" behavior="scroll" loop="1">
+            <img src="C:\Users\Asus\Pictures\Saved Pictures\1993698.jpg" alt="Image1">
+            <img src="C:\Users\Asus\Pictures\Saved Pictures\7244709.jpg" alt="Image2">
+            <img src="C:\Users\Asus\Pictures\Saved Pictures\7869681.jpg" alt="Image3">
+        </marquee>
+    </div>
+
+    <div class="marquee-container">
+        <marquee class="marquee-4" direction="up" scrollamount="5" height="100%">
+            Текст рухається повільно.
+        </marquee>
+    </div>
+
+    <div class="marquee-container">
+        <marquee class="marquee-5" direction="up" scrollamount="15" height="100%">
+            Текст рухається швидше.
+        </marquee>
+    </div>
+
+</body>
+</html>
