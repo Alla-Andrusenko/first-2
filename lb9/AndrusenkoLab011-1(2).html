@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея Чорнобиля</title>
+    <style>
+        /* Скидання стилів (CSS Reset) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Основні стилі */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('path_to_your_image.jpg'); /* Фонове зображення сторінки */
+            background-size: cover;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            font-style: italic; /* Стиль тексту курсив */
+            padding-left: 20px; /* Відстань ліворуч від тексту */
+            padding-right: 20px; /* Відстань праворуч від тексту */
+        }
+
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: bold; /* Заголовок 1-го рівня жирним */
+            color: #ff6347; /* Колір заголовка */
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+        }
+
+        nav a:visited {
+            color: #9b9b9b; /* Колір відвіданих посилань */
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: #ff6347; /* Колір активних посилань */
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #35424a;
+            color: #ffffff;
+            margin-top: 20px;
+        }
+
+        /* Стилі для галереї */
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr; /* Одна колонка */
+            gap: 20px;
+        }
+
+        figure {
+            margin: 0;
+            text-align: center;
+        }
+
+        img {
+            width: 500px; /* Фіксована ширина */
+            height: 500px; /* Фіксована висота */
+            object-fit: cover; /* Обрізає зображення, щоб воно заповнювало задані розміри */
+            border-radius: 8px;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #444;
+        }
+
+        p {
+            text-align: justify; /* Вирівнювання тексту по ширині */
+            text-indent: 30px; /* Червоний рядок на початку абзаців */
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Чорнобиль</h1>
+        <nav>
+            <a href="D:\Web\first-2\lb9\AndrusenkoLab011-1.html">Головна</a>
+            <a href="D:\Web\first-2\lb9\AndrusenkoLab011-1(1).html">Історія</a>
+            <a href="D:\Web\first-2\lb9\AndrusenkoLab011-1(2).html">Галерея</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Галерея Чорнобиля</h2>
+            <p>Це галерея фотографій, що зображують різні моменти з Чорнобиля та Прип'яті. Відображені зображення захоплюють уяву і показують страшні наслідки катастрофи.</p>
+
+            <div class="gallery">
+                <figure>
+                    <img src="D:\Web\first-2\lb9\Зображення\1439313195_chornobyl_sign.jpg" alt="Знак міста Прип'ять">
+                    <figcaption>Знак міста Прип'ять</figcaption>
+                </figure>
+                <figure>
+                    <img src="D:\Web\first-2\lb9\Зображення\lrm_export_260648912494602_20190710_181910377_650x410.jpg" alt="Четвертий енергоблок ЧАЕС">
+                    <figcaption>Четвертий енергоблок ЧАЕС</figcaption>
+                </figure>
+                <figure>
+                    <img src="D:\Web\first-2\lb9\Зображення\ou048UrabfTkj1ixVEsJRQ0S0x9sPKaG5jSFxaNd.jpg" alt="Колесо огляду в Прип'яті">
+                    <figcaption>Колесо огляду в Прип'яті</figcaption>
+                </figure>
+                <figure>
+                    <img src="D:\Web\first-2\lb9\Зображення\foto_cikavosti_21.07.2014-014.jpg" alt="Червоний ліс">
+                    <figcaption>Червоний ліс</figcaption>
+                </figure>
+                <figure>
+                    <img src="D:\Web\first-2\lb9\Зображення\OCIo7.jpg" alt="Саркофаг над реактором">
+                    <figcaption>Саркофаг над реактором</figcaption>
+                </figure>
+                <figure>
+                    <img src="D:\Web\first-2\lb9\Зображення\full__DSC1050.jpg" alt="Покинута школа в Прип'яті">
+                    <figcaption>Покинута школа в Прип'яті</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Чорнобиль. Усі права захищені.</p>
+    </footer>
+</body>
+</html>

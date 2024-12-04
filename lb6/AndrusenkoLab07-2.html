@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Відгук про курс</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 700px;
+            padding: 30px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p.description {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"], input[type="email"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        input[type="submit"], input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+        .confirmation-message {
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Відгук про курс</h2>
+        <p class="description">Ми вдячні за ваш відгук, який допоможе нам покращити якість наших курсів!</p>
+        <form onsubmit="showConfirmation(event)">
+
+            <label for="name">Ваше ім'я:</label>
+            <input id="name" name="name" type="text" maxlength="40" placeholder="Введіть ваше ім'я" required>
+
+            <label for="email">Електронна пошта:</label>
+            <input id="email" name="email" type="email" placeholder="Введіть ваш email" required>
+
+            <label for="course">Оберіть курс:</label>
+            <select id="course" name="course" required>
+                <option value="" disabled selected>Оберіть курс</option>
+                <option value="web">WEB-програмування</option>
+                <option value="design">Основи дизайну</option>
+                <option value="networking">Комп'ютерні мережі</option>
+                <option value="algorithms">Алгоритми та структури даних</option>
+            </select>
+
+            <label>Оцініть курс:</label>
+            <input type="radio" name="rating" value="5" required> 5
+            <input type="radio" name="rating" value="4"> 4
+            <input type="radio" name="rating" value="3"> 3
+            <input type="radio" name="rating" value="2"> 2
+            <input type="radio" name="rating" value="1"> 1
+
+            <label>Що вам сподобалось на курсі?</label>
+            <input type="checkbox" name="aspects" value="content"> Якість матеріалів
+            <input type="checkbox" name="aspects" value="instructor"> Професійність викладача
+            <input type="checkbox" name="aspects" value="practical"> Практичні завдання
+            <input type="checkbox" name="aspects" value="support"> Підтримка та зворотній зв'язок
+
+            <label for="comments">Додаткові коментарі:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Напишіть свій відгук"></textarea>
+
+            <div class="form-actions">
+                <input type="submit" value="Відправити відгук">
+                <input type="reset" value="Очистити форму">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function showConfirmation(event) {
+            event.preventDefault();
+            const confirmationWindow = window.open("", "_blank", "width=400,height=200");
+            confirmationWindow.document.write(`
+                <!DOCTYPE html>
+                <html lang="uk">
+                <head>
+                    <meta charset="UTF-8">
+                    <title>Підтвердження</title>
+                    <style>
+                        body { 
+                            font-family: Arial, sans-serif; 
+                            background-color: #f0f8ff; 
+                            display: flex; 
+                            justify-content: center; 
+                            align-items: center; 
+                            height: 100vh; 
+                            margin: 0;
+                        }
+                        .confirmation-message {
+                            font-size: 18px;
+                            color: #333;
+                            text-align: center;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="confirmation-message">Ваш відгук надіслано. Дякуємо за вашу думку!</div>
+                </body>
+                </html>
+            `);
+        }
+    </script>
+</body>
+</html>

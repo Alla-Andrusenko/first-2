@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма для лабораторної роботи</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        form pre {
+            font-family: inherit;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        input[type="text"], textarea, select, input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        input[type="submit"], input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+        .confirmation-message {
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        function showConfirmation(event) {
+            event.preventDefault();
+            const confirmationWindow = window.open("", "_blank", "width=400,height=200");
+            confirmationWindow.document.write(`
+                <!DOCTYPE html>
+                <html lang="uk">
+                <head>
+                    <meta charset="UTF-8">
+                    <title>Підтвердження</title>
+                    <style>
+                        body { 
+                            font-family: Arial, sans-serif; 
+                            background-color: #f0f8ff; 
+                            display: flex; 
+                            justify-content: center; 
+                            align-items: center; 
+                            height: 100vh; 
+                            margin: 0;
+                        }
+                        .confirmation-message {
+                            font-size: 18px;
+                            color: #333;
+                            text-align: center;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="confirmation-message">Ваша форма прийнята до обробки. Дякуємо за увагу.</div>
+                </body>
+                </html>
+            `);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Форма для лабораторної роботи</h2>
+        <form onsubmit="showConfirmation(event)">
+            <pre>Ваше ім'я: <input name="name" type="text" maxlength="40" size="40" value="">
+Ваша стать: 
+    <input type="radio" name="pol" value="male"> Чоловіча
+    <input type="radio" name="pol" value="female"> Жіноча
+
+На якому курсі Ви навчаєтесь?  
+    <select name="curs" size="1">
+        <option value="1" selected>Перший</option>
+        <option value="2">Другий</option>
+        <option value="3">Третій</option>
+        <option value="4">Четвертий</option>
+        <option value="5">П'ятий</option>
+    </select>
+
+Які дисципліни ви вивчаєте на курсі?
+    <input type="checkbox" name="web" value="yes" checked> WEB-програмування
+    <input type="checkbox" name="eldinam" value="yes"> Технічна електродинаміка
+
+Напишіть декілька слів про себе:
+            </pre>
+            <textarea name="about" rows="6" cols="60" wrap="off"></textarea>
+            
+            <input type="file" name="friend" accept="image/*">
+
+            <div class="form-actions">
+                <input type="submit" value="Відіслати дані">
+                <input type="reset" value="Очистити форму">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

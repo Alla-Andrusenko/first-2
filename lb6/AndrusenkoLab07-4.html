@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма замовлення на товар</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .order-form-container {
+            width: 600px;
+            background-color: #e3f2fd;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #1565c0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .form-group table th,
+        .form-group table td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        .form-group table th {
+            background-color: #bbdefb;
+        }
+        .form-group table input[type="checkbox"] {
+            transform: scale(1.2);
+        }
+        .form-group-radio {
+            margin-top: 20px;
+        }
+        .form-group-radio label {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: #1565c0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #0d47a1;
+        }
+    </style>
+</head>
+<body>
+    <div class="order-form-container">
+        <h2>Форма замовлення на товар</h2>
+        <form>
+
+            <div class="form-group">
+                <label for="account-number">Номер банківського рахунку:</label>
+                <input type="text" id="account-number" name="account-number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="user-number">Особистий номер користувача:</label>
+                <input type="text" id="user-number" name="user-number" required>
+            </div>
+
+            <div class="form-group">
+                <label>Виберіть товари:</label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Вибір</th>
+                            <th>Назва товару</th>
+                            <th>Ціна (грн)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" name="products" value="lamp"></td>
+                            <td>Світлодіодна лампа</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="products" value="socket"></td>
+                            <td>Розетка</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="products" value="switch"></td>
+                            <td>Вимикач</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="products" value="extension"></td>
+                            <td>Подовжувач</td>
+                            <td>150</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="products" value="charger"></td>
+                            <td>Зарядний пристрій</td>
+                            <td>300</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="products" value="cable"></td>
+                            <td>Кабель</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="products" value="battery"></td>
+                            <td>Акумулятор</td>
+                            <td>400</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="products" value="adapter"></td>
+                            <td>Адаптер</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="products" value="fuse"></td>
+                            <td>Запобіжник</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="products" value="sensor"></td>
+                            <td>Датчик руху</td>
+                            <td>250</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="form-group-radio">
+                <label>Виберіть спосіб оплати:</label><br>
+                <input type="radio" id="online-payment" name="payment-method" value="online" required>
+                <label for="online-payment">Онлайн оплата</label><br>
+                <input type="radio" id="cash-payment" name="payment-method" value="cash" required>
+                <label for="cash-payment">Готівкова оплата</label>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Коментарі:</label>
+                <textarea id="comments" name="comments" placeholder="Введіть ваші коментарі..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" class="submit-btn" value="Відправити замовлення">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Використання сенсорних зображень</title>
+    <style>
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+        
+
+        .tooltip {
+            position: absolute;
+            background-color: black;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+            display: none;
+            white-space: nowrap;
+            z-index: 10;
+        }
+
+
+        .image-container area:hover + .tooltip {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="image-container">
+
+            <img src="C:\Users\Asus\Pictures\Saved Pictures\image.jpg" width="300" height="260" border="1" usemap="#map_combined">
+
+
+            <map name="map_combined">
+                <area shape="rect" coords="0,0,300,260" href="D:\Web\first-2\lb4\AndrusenkoLab05-1.html" title="Водоспад">
+                <div class="tooltip" style="left: 10px; top: 10px;">Водоспад</div>
+
+                <area shape="rect" coords="0,0,300,50" href="#" title="Блакитне небо">
+                <div class="tooltip" style="left: 10px; top: 50px;">Блакитне небо</div>
+
+                <area shape="poly" coords="120,180,210,180,150,150" href="#" title="Човен">
+                <div class="tooltip" style="left: 150px; top: 160px;">Човен</div>
+
+                <area shape="poly" coords="0,20,50,20,30,140,0,120" href="#" title="Скеля">
+                <div class="tooltip" style="left: 20px; top: 80px;">Скеля</div>
+
+                <area shape="circle" coords="50,235,25" href="#" title="Камінь">
+                <div class="tooltip" style="left: 50px; top: 210px;">Камінь</div>
+            </map>
+        </div>
+    </center>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .form-container {
+            width: 600px;
+            background-color: #e0f7fa;
+            border: 2px solid #999;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            color: red;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            width: 220px;
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #999;
+            border-radius: 4px;
+        }
+        .form-group-textarea {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+        .form-group-textarea label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group-textarea textarea {
+            width: 100%;
+            height: 100px;
+            padding: 8px;
+            border: 1px solid #999;
+            border-radius: 4px;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .button-group input {
+            width: 48%;
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .button-group input:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Анкета</h2>
+        <form>
+
+            <div class="form-group">
+                <label for="surname">1. Прізвище:</label>
+                <input type="text" id="surname" name="surname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="name">2. Ім'я, по батькові:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">3. Число і рік народження:</label>
+                <input type="text" id="dob" name="dob" placeholder="дд.мм.рррр" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">4. Домашня адреса:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="workplace">5. Місце навчання (роботи):</label>
+                <input type="text" id="workplace" name="workplace">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">6. Домашній (робочий) телефон:</label>
+                <input type="text" id="phone" name="phone">
+            </div>
+
+            <div class="form-group">
+                <label for="email">7. E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group-textarea">
+                <label for="interests">8. Область наукових інтересів:</label>
+                <textarea id="interests" name="interests" placeholder="1.\n2.\n3.\n4.\n5.\n6."></textarea>
+            </div>
+
+            <div class="button-group">
+                <input type="reset" value="Відмінити введення">
+                <input type="submit" value="Надіслати дані та перейти до 2 етапу реєстрації">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

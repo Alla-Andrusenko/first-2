@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Навігація по розділах</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            font-size: 16pt;
+            color: white;
+            background-color: #4a90e2;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #357abd;
+        }
+
+        .section {
+            margin: 50px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .section-title {
+            font-size: 24pt;
+            font-weight: bold;
+            color: #4a90e2;
+            margin-bottom: 10px;
+        }
+
+        .main-text {
+            font-size: 16pt;
+            line-height: 1.8;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <a href="#section1" class="button">Розділ 1</a>
+        <a href="#section2" class="button">Розділ 2</a>
+        <a href="#section3" class="button">Розділ 3</a>
+    </div>
+
+    <div id="section1" class="section">
+        <div class="section-title">Розділ 1: Основи HTML</div>
+        <p class="main-text">HTML (HyperText Markup Language) — це стандартна мова для створення веб-документів. Вона визначає структуру контенту за допомогою тегів, які забезпечують основу для подальшої стилізації та інтерактивності.</p>
+        <a href="#top" class="button">Повернутися до меню</a>
+    </div>
+
+    <div id="section2" class="section">
+        <div class="section-title">Розділ 2: Впровадження CSS</div>
+        <p class="main-text">CSS (Cascading Style Sheets) використовується для оформлення веб-сторінок. Вона дозволяє визначати кольори, шрифти, відступи та багато іншого, що забезпечує візуальну привабливість сайтів.</p>
+        <a href="#top" class="button">Повернутися до меню</a>
+    </div>
+
+    <div id="section3" class="section">
+        <div class="section-title">Розділ 3: Використання JavaScript</div>
+        <p class="main-text">JavaScript додає функціональності та динамічності веб-сторінкам. Завдяки цій мові можна створювати інтерактивні елементи, наприклад, форми, анімації та інші динамічні компоненти.</p>
+        <a href="#top" class="button">Повернутися до меню</a>
+    </div>
+
+</body>
+</html>
